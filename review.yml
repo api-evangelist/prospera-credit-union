@@ -1,0 +1,102 @@
+aid: prospera-credit-union
+name: Prospera Credit Union
+review:
+  question: Does Prospera Credit Union expose a public first-party developer API or downloadable API specification?
+  answer: false
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    Prospera Credit Union publishes NO public first-party developer portal and
+    NO documented public API. Probes of the conventional developer subdomains —
+    developer.prospera.ca, api.prospera.ca, and developers.prospera.ca — all
+    fail to resolve (HTTP 000, no DNS). Only the member-facing marketing and
+    online-banking site www.prospera.ca returns HTTP 200. No OpenAPI/Swagger,
+    no API reference, and no self-serve developer onboarding were found.
+
+    Prospera is a British Columbia cooperative (credit union) with roughly
+    CA$9B in assets and ~120,000 members, formed in 2020 from the merger of
+    Prospera Credit Union and Westminster Savings Credit Union. Consistent with
+    the honest reality for most Canadian credit unions, it participates in
+    national payments and consumer data-sharing through shared credit-union-
+    system infrastructure rather than a proprietary API, and third-party data
+    access is aggregator/screen-scraping based (e.g. Flinks, Plaid) rather than
+    a first-party data-access API.
+
+    Canada has no operational open-banking mandate: the federal Consumer-Driven
+    Banking framework (Budget 2024 / Fall Economic Statement 2024, overseen by
+    the Financial Consumer Agency of Canada) is legislated but not yet live. No
+    published Prospera position on FDX alignment or Consumer-Driven Banking was
+    found. Member-facing Interac e-Transfer is offered as a consumer service,
+    not as a documented API.
+  developerPortal:
+    exists: false
+    url: ""
+    probed:
+      - url: https://developer.prospera.ca
+        status: 000
+        note: Does not resolve (no DNS / no connection).
+      - url: https://api.prospera.ca
+        status: 000
+        note: Does not resolve (no DNS / no connection).
+      - url: https://developers.prospera.ca
+        status: 000
+        note: Does not resolve (no DNS / no connection).
+      - url: https://www.prospera.ca/
+        status: 200
+        note: Member-facing website only; no developer or API content.
+  specProvenance: none
+  openapiHarvested: false
+  fdxParticipant: false
+  section1033Posture: not-applicable-jurisdiction
+  consumerDrivenBankingPosture: |
+    No published position. Canada's Consumer-Driven Banking (open-banking)
+    framework is legislated but not yet operational; the FCAC is the designated
+    overseer. Section 1033 (US CFPB) is not applicable to this Canadian entity.
+  authModel: none-documented
+  aggregatorAccess:
+    likely: true
+    note: |
+      Third-party access to member data in Canada today is predominantly
+      aggregator/screen-scraping based. Flinks (a Canadian, National Bank-owned
+      aggregator), Plaid, MX, and Salt Edge are the common intermediaries. This
+      is inferred as the general Canadian credit-union reality; Prospera does not
+      publish a first-party data-access API.
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No public REST API is documented.
+    - protocol: SSE
+      scheme: https
+      documented: false
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+  distinctEntityNote: |
+    This is the British Columbia cooperative credit union (prospera.ca). It is
+    unrelated to any similarly named entity; no US arm or separate banking
+    subsidiary applies.
+sources:
+  - url: https://www.prospera.ca/
+    type: Website
+    note: HTTP 200; member-facing site. Confirms cooperative credit-union identity, Interac e-Transfer as a member service, and social links. No developer or API content.
+  - url: https://www.prospera.ca/About/Our+Story
+    type: About
+    note: HTTP 200; corporate story and profile.
+  - url: https://www.prospera.ca/Policies/Legal
+    type: TermsOfService
+    note: HTTP 200; legal / privacy hub.
+  - url: https://developer.prospera.ca
+    type: Probe
+    note: HTTP 000 — developer subdomain does not resolve.
+  - url: https://api.prospera.ca
+    type: Probe
+    note: HTTP 000 — api subdomain does not resolve.
+actions:
+  apisYmlUpdated: true
+  openapiPath: ""
+  reason: |
+    Identity-only bootstrap. No public API surface exists to catalog, so apis[]
+    is empty and no OpenAPI was harvested. common[] carries only verified live
+    links (website, about, legal, support, and confirmed social profiles).
