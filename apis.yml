@@ -24,6 +24,17 @@ description: Prospera Credit Union is a member-owned cooperative financial insti
   API surface to catalog.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
+- Financial-Services
+- Banking
+- Canada
+- Credit Union
+- Cooperative
+- British Columbia
+- Interac
+- Open Banking
+- Consumer-Driven Banking
+- Data Aggregation
+tags_raw:
 - Financial Services
 - Banking
 - Canada
