@@ -1,4 +1,4 @@
-# Prospera Credit Union (prospera-credit-union)
+# Prospera Credit Union
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,55 +64,81 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Prospera Credit Union is a member-owned cooperative financial institution headquartered in British Columbia, Canada, formed on January 1, 2020 through the merger of the original Prospera Credit Union and Westminster Savings Credit Union — the largest credit-union merger in Canadian history. With roughly CA$9 billion in assets under management, about 120,000 members, and some 900 employees across branches in Metro Vancouver, the Fraser Valley, and the Okanagan, it is the third largest credit union in British Columbia and among the six largest in Canada.
+Prospera Credit Union is a member-owned cooperative financial institution headquartered in British Columbia, Canada, formed on January 1, 2020 through the merger of the original Prospera Credit Union and Westminster Savings Credit Union — the largest credit-union merger in Canadian history. With roughly CA$9 billion in assets under management, about 120,000 members, and some 900 employees across branches in Metro Vancouver, the Fraser Valley, and the Okanagan, it is the third largest credit union in British Columbia and among the six largest in Canada. As a provincially regulated cooperative (credit unions in BC are overseen by BC Financial Services Authority and deposits are protected by the Credit Union Deposit Insurance Corporation of BC), Prospera serves personal and business members with chequing and savings accounts, credit cards, mortgages, loans, and Interac e-Transfer. On the open-finance side, Prospera runs NO public first-party developer portal or documented API — none of developer/api/developers.prospera.ca resolve — and Canada's federal Consumer-Driven Banking (open-banking) framework, legislated in Budget 2024 and overseen by the FCAC, is not yet operational. Like most Canadian credit unions, Prospera reaches national payment rails and consumer data-sharing through shared credit-union-system infrastructure rather than a proprietary API, and third-party data access today is aggregator/screen-scraping based (e.g. Flinks, Plaid). This is an honest identity-only profile with no public API surface to catalog.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/prospera-credit-union/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/prospera-credit-union/refs/heads/main/apis.yml)
+**Areas:** Financial Services · Banking · Canada · Credit Union · Cooperative · British Columbia · Interac · Open Banking · Consumer-Driven Banking
 
-## Open-Finance & API Posture
+## Prospera Credit Union on APIs.io
 
-- **Charter:** Provincially regulated cooperative (credit union) in British Columbia — overseen by the BC Financial Services Authority, deposits protected by the Credit Union Deposit Insurance Corporation of BC.
-- **First-party developer portal:** None. `developer.prospera.ca`, `api.prospera.ca`, and `developers.prospera.ca` do not resolve (HTTP 000 / no DNS). Only the member-facing website `www.prospera.ca` is live (HTTP 200).
-- **Public API:** None documented. There is no published OpenAPI/Swagger, no API reference, and no self-serve developer onboarding.
-- **Payments / rails:** Member-facing Interac e-Transfer is offered as a consumer service (not an API). Like most Canadian credit unions, Prospera reaches national payment rails and consumer data-sharing through shared credit-union-system infrastructure rather than a proprietary API.
-- **Consumer-Driven Banking:** Canada's federal open-banking / Consumer-Driven Banking framework (legislated in Budget 2024, overseen by the Financial Consumer Agency of Canada) is not yet operational. No published Prospera position on FDX or CDB was found.
-- **Third-party data access:** Aggregator/screen-scraping based today (e.g. Flinks, Plaid), not a first-party API — the honest reality for most Canadian credit unions.
+Everything profiled for Prospera Credit Union is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/prospera-credit-union/](https://apis.io/providers/prospera-credit-union/)** — or go straight to one of the APIs or properties below.
 
-This is an identity-only profile: no public API surface exists to catalog.
+### Published properties
 
-## Tags
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- Financial Services
-- Banking
-- Canada
-- Credit Union
-- Cooperative
-- British Columbia
-- Interac
-- Open Banking
-- Consumer-Driven Banking
-- Data Aggregation
+#### Security (1)
 
-## Timestamps
+Authentication, trust centre, and vulnerability disclosure.
 
-- **Created:** 2026-07-23
-- **Modified:** 2026-07-23
+- [Prospera Credit Union Domain Security](https://apis.io/security/prospera-credit-union/prospera-credit-union-domain-security/)
 
-## APIs
+## Where to find this API
 
-None. Prospera Credit Union does not publish a public first-party developer API or downloadable specification.
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.prospera.ca/)
-- [About](https://www.prospera.ca/About/Our+Story)
-- [LinkedIn](https://www.linkedin.com/company/prospera-credit-union)
-- [Facebook](https://www.facebook.com/ProsperaCreditUnion)
-- [Instagram](https://www.instagram.com/prosperacreditunion)
-- [YouTube](https://www.youtube.com/user/prosperacreditunion)
-- [Terms / Legal](https://www.prospera.ca/Policies/Legal)
-- [Support / Contact](https://www.prospera.ca/contact)
+- [Support](https://www.prospera.ca/contact)
+- [Terms of service](https://www.prospera.ca/Policies/Legal)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 6.0** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 4.8 |
+| Access clarity | 10.5 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 7.9** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/prospera-credit-union/](https://apis.io/providers/prospera-credit-union/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Prospera Credit Union: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/prospera-credit-union/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
